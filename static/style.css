@@ -1,0 +1,123 @@
+/* Import Custom Font */
+@font-face {
+    font-family: 'AMBILE';
+    src: url('fonts/AMBILE.ttf') format('truetype'); /* Ensure this path is correct */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the custom font to the body */
+body {
+    font-family: 'AMBILE', 'Noto Nastaliq Urdu', sans-serif; /* Custom font added */
+    direction: rtl;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chat container styles */
+.chat-container {
+    width: 400px;
+    background: white;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Chat header */
+.chat-header {
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'AMBILE', sans-serif; /* Applying custom font */
+}
+
+/* Chat box */
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Chat input area */
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    background: #eee;
+}
+
+/* Input field */
+input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-family: 'AMBILE', sans-serif; /* Applying custom font */
+}
+
+/* Button */
+button {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'AMBILE', sans-serif; /* Applying custom font */
+}
+
+/* Messages */
+.bot-message, .user-message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    font-family: 'AMBILE', sans-serif; /* Applying custom font */
+}
+
+/* Bot messages */
+.bot-message {
+    background: #e1e1e1;
+    align-self: flex-start;
+}
+
+/* User messages */
+.user-message {
+    background: #007BFF;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Typing animation */
+.typing {
+    animation: blink 1s infinite;
+}
+
+/* Error messages */
+.error {
+    background: #ffebee;
+    color: #c62828;
+    font-family: 'AMBILE', sans-serif; /* Applying custom font */
+}
+
+/* Blinking effect */
+@keyframes blink {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+/* Make the chat container responsive for mobile devices */
+@media (max-width: 480px) {
+    .chat-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
